@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { AnimatePresence,motion} from "motion/react"
 
 
+
 const Navbar = () => {
 
     const [ishover,setishover]=useState(false);
@@ -41,7 +42,8 @@ const Navbar = () => {
        
         <div class=" flex justify-between flex shrink-0 items-center w-auto">
       
-          <img class="h-12 w-13" src='assets/logo2.png' alt="Your Company"></img>
+          <img className="h-12 w-14" src="assets/logo2.png" alt="Your Company" />
+
         </div>
         
 
