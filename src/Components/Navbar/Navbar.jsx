@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { AnimatePresence,motion} from "motion/react"
+import { Link } from 'react-router-dom';
 
 
 
@@ -51,7 +52,7 @@ const Navbar = () => {
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             
-            <ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">Home</ul>
+             <Link to={"/"}><ul class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">Home</ul></Link>
 
             <ul 
 
@@ -91,8 +92,7 @@ const Navbar = () => {
                 
                 </ul>
 
-                
-            <ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">Portfolio</ul>
+            <Link to={"/portfolio"}><ul class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">Portfolio</ul></Link>    
             <ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">How we work</ul>
             <ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">About</ul>
             <ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">Contact</ul>
@@ -123,9 +123,9 @@ const Navbar = () => {
     
     <div class="space-y-1 px-2 pt-2 pb-3">
       
-      <ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</ul>
+      <Link to={"/"} class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"><ul  aria-current="page">Home</ul></Link>
       
-      <ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Portfolio</ul>
+      <Link to={"/portfolio"} class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"><ul  aria-current="page">Portfolio</ul></Link>
 
 
        <AnimatePresence>
