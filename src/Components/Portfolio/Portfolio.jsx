@@ -152,7 +152,7 @@ const Portfolio = () => {
       key={open.imgaray[index]}
       src={open.imgaray[index]}
       alt={open.name}
-      className="sm:w-[30rem] sm:h-[17rem] lg:w-[40rem] lg:h-[30rem] xl:w-[50rem] xl:h-[33rem] 2xl:w-[50rem] 2xl:h-[33rem] rounded-lg"
+      className="w-[26rem] h-[15rem] sm:w-[30rem] sm:h-[17rem] lg:w-[40rem] lg:h-[30rem] xl:w-[50rem] xl:h-[33rem] 2xl:w-[50rem] 2xl:h-[33rem] rounded-lg"
       initial={{ opacity: 0, x: 30 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -30 }}
