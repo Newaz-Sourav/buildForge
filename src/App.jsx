@@ -7,6 +7,8 @@ import {
 import Portfolio from "./Components/Portfolio/Portfolio";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
+import Booking from "./Components/Booking/Booking";
+import HowWeWork from "./Components/HowWeWork/HowWeWork";
 
   const router = createBrowserRouter([
 
@@ -25,6 +27,28 @@ import Footer from "./Components/Footer/Footer";
       <Footer></Footer>
     </div>,
   },
+
+  {
+    path:"/booking",
+    element:
+    <div>
+      <Navbar></Navbar>
+      <Booking></Booking>
+      <Footer></Footer>
+    </div>
+    
+  },
+
+   {
+    path:"/howwework",
+    element:
+    <div>
+      <Navbar></Navbar>
+      <HowWeWork></HowWeWork>
+      <Footer></Footer>
+    </div>
+    
+  }
 
 ]);
 

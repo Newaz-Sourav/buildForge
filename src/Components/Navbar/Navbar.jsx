@@ -93,7 +93,7 @@ const Navbar = () => {
                 </ul>
 
             <Link to={"/portfolio"}><ul class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">Portfolio</ul></Link>    
-            <ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">How we work</ul>
+            <Link to={"/howwework"}><ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">How we work</ul></Link>
             <ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">About</ul>
             <ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">Contact</ul>
           </div>
@@ -162,7 +162,7 @@ const Navbar = () => {
 
         
 
-      <ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">How we work</ul>
+      <Link to={"/howwework"} class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"> <ul  aria-current="page">How we work</ul> </Link>
       <ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">About</ul>
       <ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Contact</ul>
     </div>
