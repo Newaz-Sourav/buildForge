@@ -145,7 +145,7 @@ const Navbar = () => {
         Services <i className="fa-solid fa-angle-up"></i>
       </p>
 
-      <div className="text-red-200 pl-4"><i className="fa-solid fa-caret-right"></i> Residential Interior</div>
+      <Link to={"/residential"}><div className="text-red-200 pl-4"><i className="fa-solid fa-caret-right"></i> Residential Interior</div></Link>
       <div className="text-red-200 pl-4"><i className="fa-solid fa-caret-right"></i> Commercial Interior</div>
       <div className="text-red-200 pl-4"><i className="fa-solid fa-caret-right"></i> Architectural Consultancy</div>
     </motion.div>
