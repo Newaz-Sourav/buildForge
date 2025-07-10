@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Chose = () => {
   return (
@@ -35,9 +36,9 @@ const Chose = () => {
   </div>
 
 
-  <button class="bg-yellow-300 text-gray-800 font-semibold px-6 py-2 rounded-md hover:bg-yellow-400 transition duration-200">
+  <Link to={"/booking"}><button class="bg-yellow-300 text-gray-800 font-semibold px-6 py-2 rounded-md hover:bg-yellow-400 transition duration-200">
     Book A Consultation →
-  </button>
+  </button></Link>
 </div>
 
     </div>

@@ -9,6 +9,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Booking from "./Components/Booking/Booking";
 import HowWeWork from "./Components/HowWeWork/HowWeWork";
+import Residential from "./Components/Residential";
 
   const router = createBrowserRouter([
 
@@ -48,6 +49,17 @@ import HowWeWork from "./Components/HowWeWork/HowWeWork";
       <Footer></Footer>
     </div>
     
+  },
+
+  {
+    path: "/residential",
+    element:
+    
+    <div>
+      <Navbar></Navbar>
+      <Residential></Residential>
+      <Footer></Footer>
+    </div>,
   }
 
 ]);

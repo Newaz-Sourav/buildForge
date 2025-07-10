@@ -74,9 +74,9 @@ const Navbar = () => {
                         exit={{ opacity: 0, scale: 0 }}
                         
 
-                    className="bg-gray-800 absolute top-15 left-29  p-4 border rounded-md border-2 border-indigo-600">
+                    className="bg-gray-800 absolute top-15 left-29  p-4 border rounded-md border-2 border-indigo-600 z-50">
 
-                <li className='text-white hover:bg-sky-600 px-4 py-2  cursor-pointer rounded-md'>Residential Interior</li>
+                <Link to={"/residential"}><li className='text-white hover:bg-sky-600 px-4 py-2  cursor-pointer rounded-md'>Residential Interior</li></Link>
                 <br />
                 <li className='text-white hover:bg-sky-600 px-4 py-2  cursor-pointer rounded-md'> Commercial Interior</li>
                 <br />
