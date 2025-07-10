@@ -35,7 +35,7 @@ const Residential = () => {
     {/* Right Image Section */}
     <div className="w-full lg:flex-1 flex items-center justify-center">
       <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] rounded-[40px] md:rounded-[60px] bg-[#dcb672] relative shadow-xl overflow-hidden">
-        <div className="absolute inset-0 bg-[url('assets/residential.jpg')] bg-cover bg-center rounded-[40px] md:rounded-[60px]"></div>
+        <div className="absolute inset-0 bg-[url('/assets/residential.jpg')] bg-cover bg-center rounded-[40px] md:rounded-[60px]"></div>
       </div>
     </div>
   </div>
