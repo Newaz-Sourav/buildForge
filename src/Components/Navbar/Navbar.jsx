@@ -135,66 +135,46 @@ const Navbar = () => {
         <p>{smService?(<i className="fa-solid fa-angle-up pl-[3px] pt-[6px]"></i>):(<i className="fa-solid fa-angle-down pl-[3px] pt-[6px]"></i>)}</p>
         </div>
 
-        <AnimatePresence>
+       <AnimatePresence>
   {smService && (
     <motion.div
-      key="smServiceMenu" 
+      key="smServiceMenu"
       initial={{ height: 0, opacity: 0 }}
       animate={{ height: "auto", opacity: 1 }}
       exit={{ height: 0, opacity: 0 }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
       style={{ overflow: "hidden" }}
-      className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+      className="block rounded-md bg-gray-900 text-base font-medium text-white"
     >
-      <Link to="/residential">
+      {/* content wrapper with fade delay */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.1, duration: 0.3 }}
+        className="px-3 py-2"
+      >
+        <Link to="/residential">
+          <div className="text-red-200 pl-4">
+            <i className="fa-solid fa-caret-right"></i> Residential Interior
+          </div>
+        </Link>
         <div className="text-red-200 pl-4">
-          <i className="fa-solid fa-caret-right"></i> Residential Interior
+          <i className="fa-solid fa-caret-right"></i> Commercial Interior
         </div>
-      </Link>
-      <div className="text-red-200 pl-4">
-        <i className="fa-solid fa-caret-right"></i> Commercial Interior
-      </div>
-      <div className="text-red-200 pl-4">
-        <i className="fa-solid fa-caret-right"></i> Architectural Consultancy
-      </div>
+        <div className="text-red-200 pl-4">
+          <i className="fa-solid fa-caret-right"></i> Architectural Consultancy
+        </div>
+      </motion.div>
     </motion.div>
   )}
 </AnimatePresence>
 
 
+
       </div>
 
-{/* 
-       <AnimatePresence>
-  {smService ? (
-    <motion.div
-      key="service-dropdown"
-      initial={{ height: 0, opacity: 0 }}
-      animate={{ height: "auto", opacity: 1 }}
-      exit={{ height: 0, opacity: 0 }}
-      transition={{ duration: 0.2, ease: "easeInOut" }}
-      className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white "
-    >
-      <p
-        onClick={() => setsmService(false)}
-        className="font-bold text-cyan-100 pl-2 cursor-pointer"
-      >
-        Services <i className="fa-solid fa-angle-up"></i>
-      </p>
 
-      <Link to={"/residential"}><div className="text-red-200 pl-4"><i className="fa-solid fa-caret-right"></i> Residential Interior</div></Link>
-      <div className="text-red-200 pl-4"><i className="fa-solid fa-caret-right"></i> Commercial Interior</div>
-      <div className="text-red-200 pl-4"><i className="fa-solid fa-caret-right"></i> Architectural Consultancy</div>
-    </motion.div>
-  ) : (
-    <div
-      onClick={() => setsmService(true)}
-      className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white cursor-pointer"
-    >
-      Services <i className="fa-solid fa-angle-down"></i>
-    </div>
-  )}
-</AnimatePresence> */}
 
 
         
