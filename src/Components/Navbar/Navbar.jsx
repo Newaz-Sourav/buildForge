@@ -43,7 +43,7 @@ const Navbar = () => {
        
         <div class=" flex justify-between flex shrink-0 items-center w-auto">
       
-          <img className="h-12 w-14" src="assets/logo2.png" alt="Your Company" />
+          <Link to={"/"}><img className="h-12 w-14" src="assets/logo2.png" alt="Your Company" /></Link>
 
         </div>
         
@@ -114,12 +114,13 @@ const Navbar = () => {
 
         <motion.div 
         
-      initial={{ height: 0, opacity: 0 }}
-      animate={{ height: "auto", opacity: 1 }}
-      exit={{ height: 0, opacity: 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            style={{ overflow: "hidden" }}
         
-        className="sm:hidden" id="mobile-menu">
+        className="sm:hidden z-50 absolute w-full bg-white" id="mobile-menu">
     
     <div class="space-y-1 px-2 pt-2 pb-3">
       
@@ -127,7 +128,43 @@ const Navbar = () => {
       
       <Link to={"/portfolio"} class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"><ul  aria-current="page">Portfolio</ul></Link>
 
+      <div  className="flex flex-col block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">
+        
+        <div className='flex flex-row' onClick={()=>setsmService(!smService)}>
+          Services 
+        <p>{smService?(<i className="fa-solid fa-angle-up pl-[3px] pt-[6px]"></i>):(<i className="fa-solid fa-angle-down pl-[3px] pt-[6px]"></i>)}</p>
+        </div>
 
+        <AnimatePresence>
+  {smService && (
+    <motion.div
+      key="smServiceMenu" 
+      initial={{ height: 0, opacity: 0 }}
+      animate={{ height: "auto", opacity: 1 }}
+      exit={{ height: 0, opacity: 0 }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      style={{ overflow: "hidden" }}
+      className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+    >
+      <Link to="/residential">
+        <div className="text-red-200 pl-4">
+          <i className="fa-solid fa-caret-right"></i> Residential Interior
+        </div>
+      </Link>
+      <div className="text-red-200 pl-4">
+        <i className="fa-solid fa-caret-right"></i> Commercial Interior
+      </div>
+      <div className="text-red-200 pl-4">
+        <i className="fa-solid fa-caret-right"></i> Architectural Consultancy
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
+
+      </div>
+
+{/* 
        <AnimatePresence>
   {smService ? (
     <motion.div
@@ -135,8 +172,8 @@ const Navbar = () => {
       initial={{ height: 0, opacity: 0 }}
       animate={{ height: "auto", opacity: 1 }}
       exit={{ height: 0, opacity: 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+      transition={{ duration: 0.2, ease: "easeInOut" }}
+      className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white "
     >
       <p
         onClick={() => setsmService(false)}
@@ -157,7 +194,7 @@ const Navbar = () => {
       Services <i className="fa-solid fa-angle-down"></i>
     </div>
   )}
-</AnimatePresence>
+</AnimatePresence> */}
 
 
         
