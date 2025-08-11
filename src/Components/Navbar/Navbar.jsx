@@ -78,9 +78,9 @@ const Navbar = () => {
 
                 <Link to={"/residential"}><li className='text-white hover:bg-sky-600 px-4 py-2  cursor-pointer rounded-md'>Residential Interior</li></Link>
                 <br />
-                <li className='text-white hover:bg-sky-600 px-4 py-2  cursor-pointer rounded-md'> Commercial Interior</li>
+                <Link to={"/commercial"}><li className='text-white hover:bg-sky-600 px-4 py-2  cursor-pointer rounded-md'> Commercial Interior</li></Link>
                 <br />
-                <li className='text-white hover:bg-sky-600 px-4 py-2 cursor-pointer rounded-md'>Architectural Consultancy</li>
+                {/* <li className='text-white hover:bg-sky-600 px-4 py-2 cursor-pointer rounded-md'>Architectural Consultancy</li> */}
                 
                 </motion.div>
                 ):null}
@@ -94,8 +94,8 @@ const Navbar = () => {
 
             <Link to={"/portfolio"}><ul class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">Portfolio</ul></Link>    
             <Link to={"/howwework"}><ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">How we work</ul></Link>
-            <ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">About</ul>
-            <ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">Contact</ul>
+            <Link to={"/about"}><ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">About</ul></Link>
+            <Link to={"/contact"}><ul href="#" class="rounded-md  px-3 py-2 text-sm font-medium text-slate" aria-current="page">Contact</ul></Link>
           </div>
         </div>
       </div>
@@ -146,7 +146,7 @@ const Navbar = () => {
       style={{ overflow: "hidden" }}
       className="block rounded-md bg-gray-900 text-base font-medium text-white"
     >
-      {/* content wrapper with fade delay */}
+     
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -159,12 +159,12 @@ const Navbar = () => {
             <i className="fa-solid fa-caret-right"></i> Residential Interior
           </div>
         </Link>
-        <div className="text-red-200 pl-4">
+         <Link to={"/commercial"}><div className="text-red-200 pl-4">
           <i className="fa-solid fa-caret-right"></i> Commercial Interior
-        </div>
-        <div className="text-red-200 pl-4">
+        </div></Link>
+        {/* <div className="text-red-200 pl-4">
           <i className="fa-solid fa-caret-right"></i> Architectural Consultancy
-        </div>
+        </div> */}
       </motion.div>
     </motion.div>
   )}
@@ -180,8 +180,9 @@ const Navbar = () => {
         
 
       <Link to={"/howwework"} class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"> <ul  aria-current="page">How we work</ul> </Link>
-      <ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">About</ul>
-      <ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Contact</ul>
+      <Link to={"/about"}><ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">About</ul></Link>
+
+      <Link to={"/contact"}><ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Contact</ul></Link>
     </div>
   </motion.div>
       ) : null

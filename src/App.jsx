@@ -10,6 +10,9 @@ import Footer from "./Components/Footer/Footer";
 import Booking from "./Components/Booking/Booking";
 import HowWeWork from "./Components/HowWeWork/HowWeWork";
 import Residential from "./Components/Residential";
+import Commercial from "./Components/commercial/commercial";
+import ContactUs from "./Components/Contact/ContactUs"
+import About from "./Components/About/About";
 
   const router = createBrowserRouter([
 
@@ -58,6 +61,39 @@ import Residential from "./Components/Residential";
     <div>
       <Navbar></Navbar>
       <Residential></Residential>
+      <Footer></Footer>
+    </div>,
+  },
+
+   {
+    path: "/commercial",
+    element:
+    
+    <div>
+      <Navbar></Navbar>
+      <Commercial></Commercial>
+      <Footer></Footer>
+    </div>,
+  },
+
+  {
+    path: "/contact",
+    element:
+    
+    <div>
+      <Navbar></Navbar>
+      <ContactUs></ContactUs>
+      <Footer></Footer>
+    </div>,
+  },
+
+  {
+    path: "/about",
+    element:
+    
+    <div>
+      <Navbar></Navbar>
+      <About></About>
       <Footer></Footer>
     </div>,
   }
