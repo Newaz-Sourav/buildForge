@@ -10,7 +10,7 @@ import Footer from "./Components/Footer/Footer";
 import Booking from "./Components/Booking/Booking";
 import HowWeWork from "./Components/HowWeWork/HowWeWork";
 import Residential from "./Components/Residential";
-import Commercial from "./Components/commercial/commercial";
+import Commercial from "./Components/commercial/Commercial";
 import ContactUs from "./Components/Contact/ContactUs"
 import About from "./Components/About/About";
 
