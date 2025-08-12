@@ -180,9 +180,10 @@ const Navbar = () => {
         
 
       <Link to={"/howwework"} class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"> <ul  aria-current="page">How we work</ul> </Link>
-      <Link to={"/about"}><ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">About</ul></Link>
 
-      <Link to={"/contact"}><ul class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Contact</ul></Link>
+      <Link to={"/about"} class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"><ul aria-current="page">About</ul></Link>
+
+      <Link to={"/contact"} class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"><ul aria-current="page">Contact</ul></Link>
     </div>
   </motion.div>
       ) : null
